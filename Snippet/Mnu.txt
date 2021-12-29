@@ -1,0 +1,47 @@
+import * as React from 'react';
+import { Text, View, StyleSheet } from 'react-native';
+import Constants from 'expo-constants';
+
+// You can import from local files
+import AssetExample from './components/AssetExample';
+
+// or any pure javascript modules available in npm
+import { Card } from 'react-native-paper';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+       <View>      1   
+       </View>
+       <View style={styles.menu}>      
+            <View style={styles.menuItem}><View style={{ flex: 0.8 }}>1.1</View><View style={{ flex: 0.2,textAlign: "right" }}>1.2</View></View>   
+            <View style={styles.menuItem}>2</View>   
+            <View style={styles.menuItem}>3</View>   
+            <View style={styles.menuItem}>4</View>   
+       </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: '#ecf0f1',
+    padding: 8,
+  },
+  paragraph: {
+    margin: 24,
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  menu: {
+    borderRadius: 20,
+    borderWidth: 1
+  },
+  menuItem: {
+    flexDirection: 'row',
+    padding: 5
+  }
+});
