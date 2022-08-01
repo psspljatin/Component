@@ -1,0 +1,16 @@
+public static void Main()
+        {
+            var host = new HostBuilder()
+                .ConfigureAppConfiguration(config =>
+                {
+                    config.AddJsonFile("appsettings.json", false, false).AddEnvironmentVariables().Build();
+                })
+                .ConfigureServices((context, services) =>
+                {
+                    Injector.Define(services, context.Configuration, false);
+                })
+                .ConfigureFunctionsWorkerDefaults()
+                .Build();
+
+            host.Run();
+        }
