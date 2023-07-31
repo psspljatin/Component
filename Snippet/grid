@@ -1,0 +1,89 @@
+import { Text, View, StyleSheet, Image } from 'react-native';
+
+export default function AssetExample() {
+  return (
+    <View style={styles.container}>
+      <View style={styles.colums}>
+        <View style={styles.alrw}>1</View>
+        <View style={styles.alrw}>2</View>
+        <View style={styles.alrw}>3</View>
+        <View style={styles.alrw}>4</View>
+        <View style={styles.alrw}>5</View>
+        <View style={styles.alrw}>6</View>
+        <View style={styles.alrw}>7</View>
+      </View>  
+      <View style={styles.colums}>
+        <View style={styles.rw}>1</View>
+        <View style={styles.rw}>2</View>
+        <View style={styles.rw}>3</View>
+        <View style={styles.rw}>4</View>
+        <View style={styles.rw}>5</View>
+        <View style={styles.rw}>6</View>
+        <View style={styles.rw}>7</View>
+      </View>  
+      <View style={styles.colums}>
+        <View style={styles.alrw}>1</View>
+        <View style={styles.alrw}>2</View>
+        <View style={styles.alrw}>3</View>
+        <View style={styles.alrw}>4</View>
+        <View style={styles.alrw}>5</View>
+        <View style={styles.alrw}>6</View>
+        <View style={styles.alrw}>7</View>
+      </View>  
+       <View style={styles.colums}>
+        <View style={styles.rw}>1</View>
+        <View style={styles.rw}>2</View>
+        <View style={styles.rw}>3</View>
+        <View style={styles.rw}>4</View>
+        <View style={styles.rw}>5</View>
+        <View style={styles.rw}>6</View>
+        <View style={styles.rw}>7</View>
+      </View>  
+      <View style={styles.colums}>
+        <View style={styles.alrw}>1</View>
+        <View style={styles.alrw}>2</View>
+        <View style={styles.alrw}>3</View>
+        <View style={styles.alrw}>4</View>
+        <View style={styles.alrw}>5</View>
+        <View style={styles.alrw}>6</View>
+        <View style={styles.alrw}>7</View>
+      </View>  
+      <View style={styles.colums}>
+        <View style={styles.rw}>1</View>
+        <View style={styles.rw}>2</View>
+        <View style={styles.rw}>3</View>
+        <View style={styles.rw}>4</View>
+        <View style={styles.rw}>5</View>
+        <View style={styles.rw}>6</View>
+        <View style={styles.rw}>7</View>
+      </View> 
+      <View style={styles.colums}>
+        <View style={styles.alrw}>1</View>
+        <View style={styles.alrw}>2</View>
+        <View style={styles.alrw}>3</View>
+        <View style={styles.alrw}>4</View>
+        <View style={styles.alrw}>5</View>
+        <View style={styles.alrw}>6</View>
+        <View style={styles.alrw}>7</View>
+      </View>  
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 24,
+  },  
+  colums: {
+    flexDirection: 'row',
+  },
+  rw: {
+    padding: 15
+  },
+  alrw: {
+    padding: 15,
+    backgroundColor: 'rgba(226, 234, 228, 0.8)'
+  }
+});
