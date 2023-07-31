@@ -1,71 +1,27 @@
 import { Text, View, StyleSheet, Image } from 'react-native';
 
+const frd = [
+    ["1", "2", "3", "4", "5", "6", "7"],
+    ["1", "2", "3", "4", "5", "6", "7"],
+    ["1", "2", "3", "4", "5", "6", "7"],
+    ["1", "2", "3", "4", "5", "6", "7"],
+    ["1", "2", "3", "4", "5", "6", "7"],
+    ["1", "2", "3", "4", "5", "6", "7"],
+    ["1", "2", "3", "4", "5", "6", "7"],
+];
+
 export default function AssetExample() {
   return (
     <View style={styles.container}>
-      <View style={styles.colums}>
-        <View style={styles.alrw}>1</View>
-        <View style={styles.alrw}>2</View>
-        <View style={styles.alrw}>3</View>
-        <View style={styles.alrw}>4</View>
-        <View style={styles.alrw}>5</View>
-        <View style={styles.alrw}>6</View>
-        <View style={styles.alrw}>7</View>
-      </View>  
-      <View style={styles.colums}>
-        <View style={styles.rw}>1</View>
-        <View style={styles.rw}>2</View>
-        <View style={styles.rw}>3</View>
-        <View style={styles.rw}>4</View>
-        <View style={styles.rw}>5</View>
-        <View style={styles.rw}>6</View>
-        <View style={styles.rw}>7</View>
-      </View>  
-      <View style={styles.colums}>
-        <View style={styles.alrw}>1</View>
-        <View style={styles.alrw}>2</View>
-        <View style={styles.alrw}>3</View>
-        <View style={styles.alrw}>4</View>
-        <View style={styles.alrw}>5</View>
-        <View style={styles.alrw}>6</View>
-        <View style={styles.alrw}>7</View>
-      </View>  
-       <View style={styles.colums}>
-        <View style={styles.rw}>1</View>
-        <View style={styles.rw}>2</View>
-        <View style={styles.rw}>3</View>
-        <View style={styles.rw}>4</View>
-        <View style={styles.rw}>5</View>
-        <View style={styles.rw}>6</View>
-        <View style={styles.rw}>7</View>
-      </View>  
-      <View style={styles.colums}>
-        <View style={styles.alrw}>1</View>
-        <View style={styles.alrw}>2</View>
-        <View style={styles.alrw}>3</View>
-        <View style={styles.alrw}>4</View>
-        <View style={styles.alrw}>5</View>
-        <View style={styles.alrw}>6</View>
-        <View style={styles.alrw}>7</View>
-      </View>  
-      <View style={styles.colums}>
-        <View style={styles.rw}>1</View>
-        <View style={styles.rw}>2</View>
-        <View style={styles.rw}>3</View>
-        <View style={styles.rw}>4</View>
-        <View style={styles.rw}>5</View>
-        <View style={styles.rw}>6</View>
-        <View style={styles.rw}>7</View>
-      </View> 
-      <View style={styles.colums}>
-        <View style={styles.alrw}>1</View>
-        <View style={styles.alrw}>2</View>
-        <View style={styles.alrw}>3</View>
-        <View style={styles.alrw}>4</View>
-        <View style={styles.alrw}>5</View>
-        <View style={styles.alrw}>6</View>
-        <View style={styles.alrw}>7</View>
-      </View>  
+      {frd.map((items, index) => {
+        return (
+           <View style={styles.colums}>
+            {items.map((subItems) => {
+              return <View style={ index % 2 ? styles.rw : styles.alrw}>{subItems}</View>;
+            })}
+          </View> 
+        );
+      })}
     </View>
   );
 }
